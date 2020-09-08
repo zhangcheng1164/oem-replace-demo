@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+html,body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.head {
+  height: $header-height;
+  width: 100%;
+  border: $border-width solid orange;
+  background: $header-bg;
+
+  .logo {
+    height: 100%;
+    width: 200px;
+    background-image: $logo-img;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+}
+
+.side-nav {
+  width: 200px;
+  height: calc(100vh - #{$header-height});
+  border: $border-width solid #E1E4E8;
+  border-right-width: 10px;
+
+  ul {
+    list-style-type: none;
+    li {
+      margin-top: 5px;
+
+      a{
+        text-decoration: none;
+        color: #666666;
+      }
+    } 
+  } 
+}
+
+.main {
+  flex: 1;
+  height: calc(100vh - #{$header-height});
+  border: $border-width solid pink;
+}
+
